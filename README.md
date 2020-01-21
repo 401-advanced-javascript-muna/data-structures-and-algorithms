@@ -8,8 +8,5 @@ Insert a value in the middle of an array
 I made the function and test
 
 ## Solution
-<!-- Embedded whiteboard image -->
-#### UML
-
 
 ![uml](UML.jpg)

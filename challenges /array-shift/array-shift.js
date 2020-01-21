@@ -1,6 +1,7 @@
 'use strict';
 function insertShiftArray(arr, val) {
     let middle = Math.ceil(arr.length / 2);
+    
     let newArray = [];
 
 
@@ -13,4 +14,5 @@ function insertShiftArray(arr, val) {
     }
     return newArray;
 }
+
 module.exports = insertShiftArray;
