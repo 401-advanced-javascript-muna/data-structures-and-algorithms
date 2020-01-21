@@ -1,4 +1,4 @@
-const  insertShiftArray = require('../../array-shift');
+const  insertShiftArray = require('./array-shift.js');
 
 describe('I want to insert a value in the middle of an array (array.length is odd number)', ()=>{
     it(' insert a value in the middle of an array',()=>{
