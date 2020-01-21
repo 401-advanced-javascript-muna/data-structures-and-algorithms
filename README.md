@@ -1,28 +1,15 @@
 # data-structures-and-algorithms
 
-# Array Shift
+# Challenge Summary
+Insert a value in the middle of an array
 
 
-### Author: muna
+## Approach & Efficiency
+I made the function and test
 
-### Links and Resources
-
-- [submission PR]
-- [ci/cd] (GitHub Actions)
-
-
-
-#### How to initialize/run your application (where applicable)
-
--  `npm start`
-
-#### Tests
-
-- How do you run tests?
-- Any tests of note?
-- Describe any tests that you did not complete, skipped, etc
-
+## Solution
+<!-- Embedded whiteboard image -->
 #### UML
 
-Link to an image of the UML for your application and response to events
-![](UML.jpg)
+
+![uml](UML.jpg)
