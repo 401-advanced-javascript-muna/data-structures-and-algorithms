@@ -7,8 +7,8 @@
 
 ### Links and Resources
 
-- [submission PR]
-- [ci/cd] (GitHub Actions)
+- [submission PR] https://github.com/401-advanced-javascript-muna/data-structures-and-algorithms/pull/1
+- [ci/cd] (GitHub Actions) https://github.com/401-advanced-javascript-muna/data-structures-and-algorithms/actions
 
 
 
