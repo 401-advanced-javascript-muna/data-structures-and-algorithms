@@ -1,11 +1,10 @@
 {
   "name": "data-structures-and-algorithms",
   "version": "1.0.0",
-  "description": "",
+  "description": "# Challenge Summary get the index of an array to the search key",
   "main": "index.js",
   "scripts": {
-    
-    "start":"array-binary-search.js",
+    "start": "array-binary-search.js",
     "test": "jest --verbose --coverage"
   },
   "repository": {
@@ -21,5 +20,6 @@
   "dependencies": {
     "eslint": "^6.8.0",
     "jest": "^24.9.0"
-  }
+  },
+  "devDependencies": {}
 }
