@@ -9,13 +9,14 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start":"node index.js",
+    "start":"npm index.js",
     "test": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/401-advanced-javascript-muna/data-structures-and-algorithms.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
