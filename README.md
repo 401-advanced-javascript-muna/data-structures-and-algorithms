@@ -1,11 +1,10 @@
 # data-structures-and-algorithms
 
-# Challenge Summary
+# Singly Linked List
 
+## Challenge
 
 ## Approach & Efficiency
 
 
-## Solution
-
-![UML](uml.jpg)
+## API
