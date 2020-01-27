@@ -3,6 +3,7 @@ class Node {
   constructor(value) {
     this.value = value;
     this.next = null;
+    this.size=0;
   }
 }
 class LinkedList {
@@ -25,21 +26,58 @@ class LinkedList {
     currentNode.next = node;
     return this;
   }
-  insertBefore(value, newVal){
-    let node = new Node(newVal);
-    let currentNode = this.head;    //Initialize current
-    while (currentNode){
-        if(currentNode !== null)
-    {
-      if (currentNode.value === value) {
-        currentNode= node;
-        currentNode.next=value;
+   toString()  {
+    let currentNode = this.head;
+    let allNodeString = '';
+    while (currentNode) {
+      allNodeString += ` ${currentNode.value} ->`;
+      currentNode = currentNode.next;
     }
-      console.log(currentNode,currentNode.next,'kkkkkkkk')
+    console.log('hhhhhh',allNodeString += ` NULL`);
+    return allNodeString += ` NULL`;
+    // "{ a } -> { b } -> { c } -> NULL"
+  }
+  insertBefore(value, newVal){
+    let currentNode;
+    let previousNode;
 
-  }}}}
-//   insertAfter(value, newVal){
+    // empty
+    if (!this.head) {
+        this.head = new Node(newVal);
+    }
 
-//   }
-// };
+    let newNode = new Node(newVal);
+    currentNode = this.head;//start from head
+    while (currentNode.value !== value) { //keep searching 
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+    }
+    newNode.next = currentNode;
+    previousNode.next = newNode;
+
+    this.size++;
+
+    }
+ 
+  insertAfter(value, newVal){
+    let currentNode;
+    let previousNode;
+
+    // empty
+    if (!this.head) {
+        this.head = new Node(newVal);
+    }
+
+    let newNode = new Node(newVal);
+    currentNode = this.head;//start from head
+    while (currentNode.value !== value) { //keep searching 
+        previousNode = currentNode;
+        currentNode = currentNode.next;
+    }
+    newNode.next =newNode ;
+    previousNode.next =currentNode ;
+
+    this.size++;
+
+  } };
 module.exports=LinkedList;

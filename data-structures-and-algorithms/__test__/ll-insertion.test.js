@@ -15,7 +15,15 @@ describe('Linked List Module', () => {
         list.append('1');
         list.append('2');
         list.append('3');
-        list.insertBefore(2,'test')
-        // expect(list).toEqual('initialValue');//The head property will properly point to the first node in the linked list
+        list.insertBefore('2','test');
+        expect(LL.toString()).toMatch("1 -> test -> 2 -> 3 -> NULL")
+    });
+    it('insertAfter():Can properly insert before a value', () => {  
+        let list = new LL();
+        list.append('1');
+        list.append('2');
+        list.append('3');
+        list.insertAefore('2','test')
+        expect(LL.toString()).toMatch("1 -> 2 -> test -> 3 -> NULL")
     });
 });
