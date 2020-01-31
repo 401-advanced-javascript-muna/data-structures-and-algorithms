@@ -1,4 +1,4 @@
-'use strict';
+
 class Node {
   constructor(value) {
     this.value = value;
@@ -28,33 +28,31 @@ class LinkedList {
     this.size++;
     return this;
   }
-removeLastNode(){
+  removeLastNode(){
     if(!this.head){
-        Stack.top = null;
-        return null;
-      }
-      // if only one node in the list
-      if(!this.head.next){
-        let previous = this.head;
-        this.head = null;
-      Stack.top = null;
-        return previous.value ;
-      }else{
-        let previous = this.head;
-        let tail = this.head.next;
-  
-        while(tail.next !== null){
-          previous = tail;
-          tail = tail.next;
-        }
-        console.log('logic fhfhf',tail.value);
-        Stack.top = previous;
-        previous.next = null;
-        this.size--;
-        return tail.value;
-      }
-  
+      return null;
     }
+    // if only one node in the list
+    if(!this.head.next){
+      let previous = this.head;
+      this.head = null;
+      return previous.value ;
+    }else{
+      let previous = this.head;
+      let tail = this.head.next;
+
+      while(tail.next !== null){
+        previous = tail;
+        tail = tail.next;
+      }
+
+      previous.next = null;
+      this.size--;
+      return tail.value;
+    }
+
+  }
+
 }
 /********************   STACK  **********************/
 class Stack{
@@ -70,13 +68,8 @@ class Stack{
 
   pop(){
     let item = this.storage.removeLastNode();
-    this.top=item;
-    console.log('***************',item);
-    console.log(this.top,'kkkkkkkkkkkkkkkkkk');
-    
-    // this.top = !this.storage.size ? null : 
-
-        return item;
+    this.top = item;
+    return item;
   }
 
   peek(){
@@ -91,4 +84,54 @@ class Stack{
 /********************   QUEUE **********************/
 
 
-module.exports = Stack;
+class Queue {
+  constructor(){
+    this.storage = new LinkedList();
+    this.front = null;
+    this.rear = null;
+    this.size = LinkedList.size;
+  }
+
+  enqueue(item){
+    let ele = this.storage.insert(item);
+    // console.log('kkkkkkkkkkk',ele.size);
+    this.size++;
+    if(ele.size === 1){
+      this.front = item;
+      this.rear = item;
+
+    }
+    else{
+      this.rear = item;
+    }
+  }
+
+  dequeue(){
+    if( this.storage.size === 0){
+      this.front = null;
+      this.rear = null;
+      return null;
+    }else{
+      let ptr = this.storage.head.value;
+      this.front = this.storage.head.next.value;
+      this.storage.size--;
+      return ptr;
+    }
+
+
+  }
+  peek(){
+    return this.front;
+  }
+
+  isEmpty(){
+    if(this.front === null && this.rear === null)  {
+      return false;
+    }
+    else {return true;}
+
+  }
+}
+
+
+module.exports = {Stack,Queue};
