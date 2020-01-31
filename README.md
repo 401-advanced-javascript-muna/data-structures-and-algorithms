@@ -1,10 +1,15 @@
 # data-structures-and-algorithms
 # Challenge Summary
-llmerge 
+Interview 01
+Reverse a Linked List.
+I maked a mock interveiw with Mai
 ## Challenge Description
-merge 2 linked list into one
+reverse a linked list 
 ## Approach & Efficiency
-I wrote a function and tested it
+O(n) time & O(1) space
+
 ## Solution
-![](w1.jpg)
-![](w2.jpg)
+![](wb.jpg)
+
+
+
