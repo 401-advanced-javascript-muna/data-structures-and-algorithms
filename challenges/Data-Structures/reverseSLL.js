@@ -1,6 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-redeclare */
 'use strict';
 class Node {
   constructor(value) {
@@ -11,6 +8,7 @@ class Node {
 class LinkedList {
   constructor() {
     this.head = null;
+    this.size = 0;
   }
 
   insert(value) {
@@ -71,7 +69,30 @@ class LinkedList {
     }
     return this;
   }
+  insertBeforeHead(value){
+    let newNode = new Node(value);
+    newNode.next = this.head;
+    this.head = newNode;
+    this.size++;
+    return this;
+
+  }
+  reverseSLL(list){
+    let  tmplist = new LinkedList();
+    //  ,previous;
+    let currentNode = list.head;
+
+    if(!currentNode){return 'can not reverse the linked list is empty';}
+    else{
+      while(currentNode){
+        tmplist.insertBeforeHead(currentNode.value);
+        currentNode = currentNode.next;
+
+      }
+    }
+    return tmplist;
+  }
 
 }
 
-module.exports = LinkedList ;
+module.exports = LinkedList;
