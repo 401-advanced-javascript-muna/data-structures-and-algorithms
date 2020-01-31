@@ -1,7 +1,7 @@
 {
   "name": "data-structures-and-algorithms",
   "version": "1.0.0",
-  "description": "",
+  "description": "stack-and-queue ## Challenge Description ## Approach & Efficiency ## Solution ![](w1.jpg) ![](w2.jpg)",
   "main": "index.js",
   "dependencies": {
     "eslint": "^6.8.0",
