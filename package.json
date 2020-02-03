@@ -22,5 +22,6 @@
   "bugs": {
     "url": "https://github.com/401-advanced-javascript-muna/data-structures-and-algorithms/issues"
   },
-  "homepage": "https://github.com/401-advanced-javascript-muna/data-structures-and-algorithms#readme"
+  "homepage": "https://github.com/401-advanced-javascript-muna/data-structures-and-algorithms#readme",
+  "keywords": []
 }
