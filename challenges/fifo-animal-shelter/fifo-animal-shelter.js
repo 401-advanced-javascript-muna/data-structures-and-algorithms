@@ -1,4 +1,4 @@
-'use strict';
+
 
 class Node {
   constructor(value) {
@@ -58,34 +58,49 @@ class LinkedList {
 
 class AnimalShelter {
   constructor() {
-    this.queuestorage = New LinkedList();
-    this.front = this.queuestorage.head;
+    this.storage = new LinkedList();
+    this.front = this.storage.head;
     this.rear = null;
     this.size = LinkedList.size;
   }
 
   enqueue(animal) {
-    // if (animal === 'dog' || 'cat') {
+    if (animal === 'dog' || animal === 'cat') {
 
-    let ele = this.storage.insert(animal);
-    this.size++;
-    if(ele.size === 1){
-      this.front = item;
-      this.rear = item;
+      let ele = this.storage.insert(animal);
+      this.size++;
+      if(ele.size === 1){
+        this.front = animal;
+        this.rear = animal;
 
-    }else{
-      this.rear = item;
+      }else{
+        this.rear = animal;
+      }
     }
-  // }
-  //  else {
-  //   return ;
-  // }
+    else {
+      return null;
+    }
   }
 
   dequeue(pref) {
-  if (animal === 'dog' || 'cat') {return pref;}
-  else{return null;}
 
-  
+    if (!this.storage.head){
+      return null;
+    }
+    if (pref === 'dog' ||  pref === 'cat') {
+
+      let ptr = this.storage.head.value;
+      this.front = this.storage.head.next.value;
+      this.storage.size--;
+      return ptr;
+
+
+    }
+    else{return null;}
+
+
   }
 }
+module.exports = {AnimalShelter,LinkedList};
+
+// module.exports=AnimalShelter;

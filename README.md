@@ -18,7 +18,8 @@ with the following methods:
 
 ## Approach & Efficiency
 
-
+enqueue big O(1)
+dequeue big O(1)
 
 ## Solution
 ![](wb.jpg)
