@@ -5,6 +5,7 @@ llmerge
 merge 2 linked list into one
 ## Approach & Efficiency
 I wrote a function and tested it
+Big O (n)
 ## Solution
 ![](w1.jpg)
 ![](w2.jpg)
