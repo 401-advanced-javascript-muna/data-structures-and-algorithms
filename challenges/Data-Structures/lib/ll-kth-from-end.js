@@ -1,4 +1,5 @@
-
+/* eslint-disable strict */
+'use strict';
 class Node{
   constructor(value){
     this.value = value;
@@ -38,6 +39,7 @@ class LinkedList{
   llkthFromEnd(k){
     let currentNode = this.head;
     // console.log(currentNode,'***********');
+    if(k < 0){return 'Exception'; }
     if(this.size <= k){return 'Exception';}
     if(this.size > k){
       for(let i = 0;i < this.size - k - 1;i++){

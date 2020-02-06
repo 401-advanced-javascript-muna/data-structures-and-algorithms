@@ -7,6 +7,7 @@
 
 ## Approach & Efficiency
 I created a funtion and tested it  . 
+llkthFromEnd(k)  Big O(n)
 
 ## Solution
-<!-- Embedded whiteboard image -->
+![](wb.jpg)
