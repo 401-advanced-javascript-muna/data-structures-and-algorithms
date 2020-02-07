@@ -1,5 +1,5 @@
 
-
+'use strict ';
 class Node{
   constructor(value, next = null){
     this.value = value;
@@ -33,24 +33,35 @@ class Stack{
     else{return this.top.value;}
   }
 
-  isEmpty(){
-    if(this.top) return false;
-
-    if(!this.top) return true;
-  }
-
 }
 
-class PseudoQueue {
+class PseudoQueue    {
   constructor(){
-    this.stack = new Stack();
+    this.stack1 = new Stack();
+    this.stack2 = new Stack();
   }
 
   enqueue(value){
-    this.stack.push(value);
+    this.stack1.push(value);
   }
 
-  dequeue(){
+  dequeue() {
+    if(this.stack2.top) {
+      return this.stack2.pop();
+    }
+    else while(this.stack1.top) {
+      let value = this.stack1.pop();
+      this.stack2.push(value);
+    }
+    if(this.stack2.top) {
+      return this.stack2.pop();
+    }
+    if(!this.stack2.top) {
+      return null;
+    }
+    if(!this.stack1.top) {
+      return null;
+    }
   }
 }
-module.exports = {   PseudoQueue };
+module.exports = PseudoQueue ;

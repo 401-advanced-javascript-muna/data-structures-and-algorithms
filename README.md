@@ -19,9 +19,8 @@ Stack:
 
 
 Queue:
-enqueue(item):O(n),
-dequeue():O(1),
-isEmpty():O(1)
+enqueue(item):O(1),
+dequeue():O(n)
 
 
 
