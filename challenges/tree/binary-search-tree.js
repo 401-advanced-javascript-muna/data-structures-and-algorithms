@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 'use strict ';
- 
-const BinaryTree = require('./binary-tree.js')
+
+const BinaryTree = require('./binary-tree.js');
 
 class BinarySearchTree extends BinaryTree {
   constructor(root = null){
@@ -9,62 +9,59 @@ class BinarySearchTree extends BinaryTree {
   }
   add(newNode){
     // if empty
+    if (!this.root){  this.root = newNode;}
 
-    // if(this.root.left === null && this.root.val > newNode.val){this.root.left = newNode;}
-    // if(this.root.right === null && this.root.val < newNode.val){this.root.right = newNode;}
+    let walk = (node) =>{
+      // console.log(node.val,'nnnnnnnnnnn');
 
-  
-      let _walk = (node =this.root) =>{
-        console.log(node,'nnnnnnnnnnn')
-  
-        if(node.val > newNode.val && !node.left) //node.lft empty
-        console.log('empty left')
-        { node.left = newNode;
-        }
-        if(node.val > newNode.val){ //search in left
-          console.log('searching left');
+      if((node.val > newNode.val) && (!node.left)) //node.lft empty
+      {
+        // console.log('empty left');
+        // console.log('treeeeeee4',this.root);
 
-          _walk(node.left);
-        }
-  
-        if(node.val < newNode.val && !node.right) //node.right empty
-        { node.right = newNode;
-          console.log('empty right')
+        node.left = newNode;
+      }
+      if(node.val > newNode.val){ //search in left
+        // console.log('searching left',node.left);
+        // console.log('treeeeeee3',this.root);
 
-        }
-        else if(node.val < newNode.val){ //search in right
-          console.log('search right')
-
-          _walk(node.right);
-        }
-      };
-      if (!this.root){this.root = newNode;}
-      else{  _walk();
+        walk(node.left);
       }
 
-  
-    }
-    
-  contains(value){
-    // if empty
-    if (this.root === null ){return null;}
+      if(node.val < newNode.val && !node.right) //node.right empty
+      { node.right = newNode;
+        // console.log('empty right',node.right);
+        // console.log('treeeeeee1',this.root);
 
-    else
-    { let _walk = (node) =>{
-      if (node.val === value) {return true;}
-      else{
-        while (node.left.val > value)
-        { _walk(node.left);}
 
-        while (node.right.val > value)
-        { _walk(node.right);}
-        console.log(node,'nnnnnnnnnnn')
+      }
+      else if(node.val < newNode.val){ //search in right
+        // console.log('search right',node.right);
+        // console.log('treeeeeee2',this.root);
 
-        _walk(this.root);
-
+        walk(node.right);
       }
     };
+    if(this.root){  walk(this.root);
+      // console.log('walk walk walk');
     }
+
+
+  }
+
+  contains(value){
+    let currentNode = this.root;
+    while (currentNode !== null){
+      if (currentNode.val === value){ //if find
+        return true;
+      }
+      else if (value < currentNode.val){  //go left
+        currentNode = currentNode.left;
+      }else{
+        currentNode = currentNode.right; //or go right
+      }
+    }
+    return false;
   }
   run(){
     super.postOrder();

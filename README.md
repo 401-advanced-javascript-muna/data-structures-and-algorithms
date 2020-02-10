@@ -1,17 +1,22 @@
 # data-structures-and-algorithms
 
-tree
+
 
 # Challenge Summary
-create a tree
+- Tree
 
 ## Challenge Description
 
 
 ## Approach & Efficiency
+- add O(logn)
 
+- includes O(logn)
 
+- inOrder(),postOrder(),preOrder()  : O(n)
 
 
 ## Solution
-![](uml.jpg)
+![](wb151.jpg)
+![](wb152.jpg)
+
