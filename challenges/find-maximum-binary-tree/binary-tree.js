@@ -43,7 +43,35 @@ class BinaryTree{
     _walk(this.root);
     return results;
   }
+  fizzBuzzTree(tree){
+    let results = [];
 
+    let _walk = (node)=>{
+      
+      if(node.left){
+        if (node.val%3 === 0  && node.val%5 ===0){node.val ="fizzBuzz"}
+        if (node.val%3 === 0 ){node.val = "fizz"}
+        if (node.val%5 === 0 ){node.val ="buzz"}
+        
+          results.push(node.val);
+        _walk(node.left);}
+      if(node.right){
+        if (node.val%3 === 0  && node.val%5 ===0){node.val ="fizzBuzz"}
+        if (node.val%3 === 0 ){node.val = "fizz"}
+        if (node.val%5 === 0 ){node.val ="buzz"}
+     
+        _walk(node.right);
+       results.push(node.val);
+      }
+    };
+    _walk(this.root);
+    console.log('ddddddd',results);     
+    return results;
 
+  }
+      
+    
 }
+
+
 module.exports = BinaryTree;

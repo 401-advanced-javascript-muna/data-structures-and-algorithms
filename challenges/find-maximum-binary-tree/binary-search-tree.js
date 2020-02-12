@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 'use strict ';
 
-const BinaryTree = require('./binary-tree.js');
+const BinaryTree = require('./binary-tree.js/index.js');
 
 class BinarySearchTree extends BinaryTree {
   constructor(root = null){
@@ -63,6 +63,10 @@ class BinarySearchTree extends BinaryTree {
     }
     return false;
   }
+
+  
+
+  
   run(){
     super.postOrder();
     super.preOrder();
