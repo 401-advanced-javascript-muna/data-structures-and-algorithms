@@ -70,4 +70,22 @@ class BinarySearchTree extends BinaryTree {
   }
 
 }
+
+// let child1 = new Node(10);
+// let child2 = new Node(30);
+// let child3 = new Node(5);
+// let child4 = new Node(4);
+// let child5 = new Node(3);
+// let child6 = new Node(15);
+// let child7 = new Node(40);
+// let tree = new BinarySearchTree();
+// tree.add(child1);
+// tree.add(child2);
+// tree.add(child3);
+// tree.add(child4);
+// tree.add(child5);
+// tree.add(child6);
+// tree.add(child7);
+
+
 module.exports = BinarySearchTree;
