@@ -1,26 +1,29 @@
 'use strict ';
 
-
 module.exports = function breadthFirst(tree){
 
+  let temporary = [] ;
+  let result = [] ;
+  if(tree.root === null){ return null ;}
+  // console.log('dddddddddddd',tree,tree.root.val);
 
-    console.log('dddddddddddd',tree,tree.root.val);
+  temporary.push(tree.root);
 
-  let queue ;
-  if (tree.root === null){return null;}
-  else{
-    array.push(tree.root);
-    // console.log('array',array);
+  while(temporary.length !== 0){
 
-        // while(array.length !== 0){
-        //   let node = array.pop();
-        //   console.log('node ',node);
-        //   if (node.left !== null){array.push(node.left.val);}
-        //   if (node.right !== null){array.push(node.right.val);}
-        // }
-        // console.log('array',array);
-        // return array;
+    for(let i = 0 ; i < temporary.length ; i++){
 
+      let current = temporary.shift();
+      result.push(current.val);
+      if(current.left){temporary.push(current.left);}
+      if(current.right){temporary.push(current.right);}
+    }
   }
+
+  console.log(result);
+
+  return result ;
+
+
 
 };
