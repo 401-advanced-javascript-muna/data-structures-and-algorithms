@@ -2,10 +2,9 @@
  Insertion Sort 
 
 ## Challenge Description
- Insertion Sort 
+ Insertion Sort :trace the algorithm by stepping through the process with the provided sample array.
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+- Time: O(n^2)
+- Space: O(1)
 
-## Solution
-<!-- Embedded whiteboard image -->
