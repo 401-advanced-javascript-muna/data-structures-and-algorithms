@@ -1,6 +1,6 @@
 'use strict ';
 
-
+// modified from https://initjs.org/merge-sort-in-javascript-4614386c1374
 function mergeSort(arr){
   if (arr.length < 2) {
     return arr;
