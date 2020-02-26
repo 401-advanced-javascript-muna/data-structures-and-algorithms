@@ -10,13 +10,13 @@ Selection Sort is a sorting algorithm that traverses the array multiple times as
 
 ### Sample Array: [8,4,23,42,16,15]
 
-### Pass 1:
 
-![](pass.jpg)
+![](pass1.jpg)
+![](pass2.jpg)
 
 
 ### Efficency
 
-#### Time: O(logn)
+#### Time: O(nLogn). In the worst case, it makes O(n2) comparisons, though this behavior is rare.
 
-#### Space: n
+#### Space: O(nLogn)
