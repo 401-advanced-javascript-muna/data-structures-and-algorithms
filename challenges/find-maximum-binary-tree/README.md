@@ -6,7 +6,7 @@
 - Tree
 
 ## Challenge Description
-
+Find the max value in binary tree
 
 ## Approach & Efficiency
 - add O(logn)
@@ -15,8 +15,10 @@
 
 - inOrder(),postOrder(),preOrder()  : O(n)
 
+- findMaxVal() space O(n), time :O(log(n))
+
 
 ## Solution
-![](wb151.jpg)
-![](wb152.jpg)
+![](wb1.jpg)
+![](wb2.jpg)
 

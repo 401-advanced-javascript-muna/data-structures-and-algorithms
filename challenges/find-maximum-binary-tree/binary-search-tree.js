@@ -64,9 +64,9 @@ class BinarySearchTree extends BinaryTree {
     return false;
   }
 
-  
 
-  
+
+
   run(){
     super.postOrder();
     super.preOrder();
