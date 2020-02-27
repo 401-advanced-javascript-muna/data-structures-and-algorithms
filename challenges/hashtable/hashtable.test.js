@@ -7,7 +7,6 @@ describe('Hashtable',()=>{
     let hashmap = new HashTable(1024);
     hashmap.add('name', 'muna');
     let index = hashmap.hash('name');
-    // console.log('index',index,hashmap.map[index].head.val[0]);
     expect(hashmap.map[index].head.val[0]).toEqual('name', 'muna');
 
   });
