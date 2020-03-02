@@ -14,11 +14,13 @@ function treeIntersection(tree1,tree2){
       // `'${node.val}'`
       hashtable.add(`'${node.val}'`, node.val);
       if(node.left)
-      {   hashtable.add(`'${node.val}'`, node.val);
+      {
+        //   hashtable.add(`'${node.val}'`, node.val);
         _walk(node.left);
       }
       if(node.right)
-      { hashtable.add(`'${node.val}'`, node.val);
+      {
+        //    hashtable.add(`'${node.val}'`, node.val);
         _walk(node.right);}
     };
     _walk(tree1.root);
