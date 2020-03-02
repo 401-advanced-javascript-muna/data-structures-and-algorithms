@@ -5,41 +5,41 @@ const Node =  require('../tree/node.js');
 const treeIntersection = require('./tree-intersection.js');
 
 describe('Tree Intersection',()=>{
-    it('treeInersection() can return null if both trees are empty ',()=>{
-        
-        let tree1 = new BinaryTree();
-        let tree2 = new BinaryTree();
-        let result = treeIntersection(tree1,tree2);
-        expect(result).toBeNull();
-      });
-      it('treeInersection() can return null if one tree is empty ',()=>{
-      
-    
-        let tree1 = new BinaryTree();
-        let child12 = new Node(150);
-        let child22 = new Node(100);
-        let child32 = new Node(2);
-        let child42 = new Node(75);
-        let child52 = new Node(160);
-        let child62 = new Node(15);
-        let child72 = new Node(40);
-        let child82 = new Node(20);
-    
-        child12.left = child22;
-        child12.right = child32;
-        child22.left = child42;
-        child22.right = child52;
-        child32.left =  child62;
-        child32.right = child72;
-        child72.left = child82;
-        let tree2 = new BinaryTree(child12);
-        // console.log('tree1',tree1);
-        // console.log('tree2',tree2);
-    
-        let result = treeIntersection(tree1,tree2);
-        // console.log('result',result)// [ 150, 100, 75, 160, 40 ]
-        expect(result).toBeNull();
-      });
+  it('treeInersection() can return null if both trees are empty ',()=>{
+
+    let tree1 = new BinaryTree();
+    let tree2 = new BinaryTree();
+    let result = treeIntersection(tree1,tree2);
+    expect(result).toBeNull();
+  });
+  it('treeInersection() can return null if one tree is empty ',()=>{
+
+
+    let tree1 = new BinaryTree();
+    let child12 = new Node(150);
+    let child22 = new Node(100);
+    let child32 = new Node(2);
+    let child42 = new Node(75);
+    let child52 = new Node(160);
+    let child62 = new Node(15);
+    let child72 = new Node(40);
+    let child82 = new Node(20);
+
+    child12.left = child22;
+    child12.right = child32;
+    child22.left = child42;
+    child22.right = child52;
+    child32.left =  child62;
+    child32.right = child72;
+    child72.left = child82;
+    let tree2 = new BinaryTree(child12);
+    // console.log('tree1',tree1);
+    // console.log('tree2',tree2);
+
+    let result = treeIntersection(tree1,tree2);
+    // console.log('result',result)// [ 150, 100, 75, 160, 40 ]
+    expect(result).toBeNull();
+  });
   it('treeInersection() can return a set of values found in both trees ',()=>{
     let child1 = new Node(150);
     let child2 = new Node(100);
