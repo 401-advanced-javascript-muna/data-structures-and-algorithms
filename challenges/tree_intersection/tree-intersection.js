@@ -3,10 +3,10 @@
 const HashTable = require('../hash-table/hashtable.js');
 
 function treeIntersection(tree1,tree2){
-
-
-
-
+if (tree1.root===null || tree2.root===null){
+    return null;
+}
+else{
     let result = [];
     //Traversal first tree and hash every node
     let hashtable = new HashTable(1024);
@@ -36,7 +36,7 @@ function treeIntersection(tree1,tree2){
     _walk2(tree2.root);
 
     return result;
-
+}
 
 }
 
