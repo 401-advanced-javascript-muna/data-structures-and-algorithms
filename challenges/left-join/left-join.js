@@ -2,20 +2,18 @@
 /* eslint-disable no-undef */
 'use strict ';
 
-// const HashTable = require('../hash-table/hashtable.js');
 
 
 function leftJoin(hash1, hash2) {
-    console.log('index', hash1.HashTable, hash2);
+    // console.log('index', hash1.HashTable, hash2);
 
-    // let leftJoinArray = [];
     let result = [];
-    if (hash1 === [] || hash2 === []) {
-        return null;
-    }
+    // if (hash1 === [] || hash2 === []) {
+    //     return null;
+    // }
 
     // hashmap1 = HashTable.hash1.map();
-    for (let i = 0; i < 1024; i++) {
+    for (let i = 0; i < hash1.size ; i++) {
         // if(hash1.contains(hashmap1[i]){
         if (hash1.map[i]) {
             // console.log('nnnnn', hash1.map[i].head.val);
@@ -28,7 +26,7 @@ function leftJoin(hash1, hash2) {
 
         }
     }
-    // console.log('resulttttttttt', result);
+    console.log('resulttttttttt', result);
     return result;
 }
 
